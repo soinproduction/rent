@@ -1,0 +1,104 @@
+.reviews-section {
+    padding-top: clamp(60px, 16.667vw, 200px);
+    padding-bottom: clamp(85px, 8.333vw, 100px);
+    background-color: rgba(var(--bg-b),1.0);
+    --gap: clamp(40px, 6.667vw, 100px);
+    overflow: hidden;
+
+    &__top {
+        gap: clamp(24px, 3.333vw, 40px);
+
+        .main-top__title {
+            color: rgba(var(--cl-e),1.0);
+        }
+
+        @include tablet {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: Min(41.667vw, 500px) 50%;
+        gap: 40px var(--gap);
+        align-items: center;
+
+        @include tablet {
+            grid-template-columns: 100%;
+        }
+    }
+
+
+    &__coll {
+        
+        display: flex;
+        flex-direction: column;
+        gap: clamp(40px, 9.333vw, 112px);
+        height: 100%;
+        position: relative;
+        z-index: 10;
+
+       @include for-tablet {
+            padding-top: Min(5vw, 60px);
+            &::before {
+                top: -10px;
+                bottom: -10px;
+                position: absolute;
+                content: '';
+                right: calc(var(--gap) * -1);
+                left: -100vw;
+                background-color: rgba(var(--bg-b),1.0);
+                z-index: -1;
+                pointer-events: none;
+            }
+       }
+
+        @include tablet {
+            position: initial;
+        }
+    }
+
+    &__slider {
+        max-width: 100%;
+    }
+
+    .swiper {
+
+        &-container {
+            overflow: initial;
+        }
+
+        &-slide {
+            height: initial;
+        }
+
+        &-pagination {
+            display: flex;
+            align-items: center;
+            padding: 2px;
+            max-width: 300px;
+            width: 100%;
+            background-color: rgba(var(--bg-g),1.0);
+            border-radius: 15px;
+
+            &-bullet {
+                height: 6px;
+                width: 100%;
+                background-color: transparent;
+                border-radius: inherit;
+
+                &-active {
+                    background-color: rgba(var(--bg-d),1.0);
+                }
+            }
+
+            @include tablet {
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                transform: translate( -50%,100%);
+            }
+        }
+    }
+}

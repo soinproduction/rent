@@ -1,0 +1,65 @@
+.trigger-section {
+    padding: clamp(60px, 5.833vw, 74px) 0;
+    background-color: rgba(var(--bg-d),1.0);
+
+    &__inner {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr minmax(260px, 1fr);
+        gap: 40px 0;
+
+        @include mobile {
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+
+        @include mobile {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+     p {
+        color: rgba(var(--cl-b),0.6);
+        font-family: var(--font-family);
+        font-size: clamp(14px, 1.667vw, 20px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 26px */
+    }
+
+    .main-button {
+        max-width: 236px;
+        height: clamp(40px, 4vw, 48px);
+        margin-top: calc(clamp(28px, 3.667vw, 44px) - 16px);
+
+        @include mobile {
+            max-width: 335px;
+        }
+    }
+
+    &__title {
+        @include for-mobile {
+            font-size: clamp(20px, 3.667vw, 44px);
+        }
+
+        @include mobile {
+            font-size: 26px;
+        }
+    }
+
+
+}

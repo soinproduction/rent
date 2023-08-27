@@ -1,0 +1,38 @@
+header {
+  background-color: rgba(var(--bg-b),1.0);
+  padding: 28px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 21;
+  transition: top 0.3s;
+
+  @include mobile {
+    padding: 20px 0;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__btn {
+    height: 32px;
+    max-width: 165px;
+  }
+
+  &__logo {
+    @include mobile {
+      max-width: 100px;
+    }
+  }
+
+  &__nav,
+  &__btn {
+    @include small-tablet {
+      display: none;
+    }
+  }
+}

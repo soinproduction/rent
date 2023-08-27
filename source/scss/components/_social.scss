@@ -1,0 +1,18 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    color: rgba(var(--cl-d),1.0);
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include mobile {
+        color: rgba(var(--cl-b),1.0);
+    }
+}

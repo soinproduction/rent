@@ -1,0 +1,95 @@
+.accordion {
+
+    --btn-size: clamp(40px, 4vw, 48px);
+
+
+    &__btn {
+        color: rgba(var(--cl-e),1.0);
+        font-family: var(--font-family);
+        font-size: clamp(16px, 2vw, 24px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-transform: uppercase;
+        text-align: left;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        position: relative;
+
+        @include small-tablet {
+            gap: 20px;
+        }
+
+        &.active {
+
+            &::before {
+                opacity: 1;
+                background-color: rgba(var(--bg-b),1.0);
+                color: rgba(var(--cl-e),1.0);
+                content: '-';
+                
+            }
+
+            &::after {
+                color: rgba(var(--cl-e),1.0);
+                background-color: rgba(var(--bg-d),1.0);
+            }
+        }
+
+        &::after {
+            width: var(--btn-size);
+            height: var(--btn-size);
+            right: 0;
+            content: '-';
+            background-color: rgba(var(--bg-d),1.0);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            transition: all .3s;
+            clip-path: polygon(75% 0, 100% 25%, 100% 100%, 25% 100%, 0% 75%, 0 0);
+        }
+
+        &::before {
+            width: calc(var(--btn-size) - 2px);
+            height: calc(var(--btn-size) - 2px);
+            right: 1px;
+            content: '+';
+            transition: all .3s;
+            background-color: rgba(var(--bg-d),1.0);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            position: absolute;
+            color: rgba(var(--cl-b),1.0);
+            clip-path: polygon(75% 0, 100% 25%, 100% 100%, 25% 100%, 0% 75%, 0 0);
+        }
+    }
+
+
+    p {
+        color: rgba(var(--cl-h),1.0);
+        font-family: var(--font-family);
+        font-size: clamp(14px, 1.5vw, 18px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        padding-top: 28px;
+    }
+
+    &__item {
+        padding: clamp(28px, 3vw, 36px) 0;
+        border-top: 1px solid var(--br-b);
+
+        &:last-child {
+            border-bottom: 1px solid var(--br-b);
+        }
+    }
+}
+

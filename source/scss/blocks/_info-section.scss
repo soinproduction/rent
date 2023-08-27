@@ -1,0 +1,15 @@
+.info-section {
+    background-color: rgba(var(--bg-f),1.0);
+    overflow: hidden;
+    height: Min(66.667vw, 800px);
+
+    &__inner {
+        align-items: center;
+        display: grid;
+        grid-template-columns: .7fr 1fr;
+    }
+
+    .swiper-container {
+        position: relative;
+    }
+}   

@@ -1,0 +1,101 @@
+<div class="overlay" data-overlay>
+  <div class="modal login-modal" data-popup="sign">
+
+    <button class="close modal__close" aria-label="Закрыть модальное окно">
+      <svg width='24' height='24'>
+        <use href='img/sprite/sprite.svg#Cancel'></use>
+      </svg>
+    </button>
+
+    <div class="modal__box login-modal__inner" role="dialog" aria-modal="true">
+
+
+      <h2 class="login-modal__title default-pretitle">
+        Sign in
+      </h2>
+
+      <form action="#" class="login-modal__form">
+
+        <label class="login-modal__label" data-legend="Email address">
+          <input type="email" placeholder='Email address'>
+        </label>
+
+        <label class="login-modal__label password-label" data-legend='Password'>
+          <input type="password">
+          <button class='show-pass login-modal__show'>
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#Eye'></use>
+            </svg>
+          </button>
+        </label>
+
+        <button  class='main-button login-modal__btn'>
+          Sign in
+        </button>
+
+        <a href="#" class='login-modal__link'>
+          Forgot your password?
+        </a>
+
+      </form>
+
+      <div class="login-modal__bottom">
+        <p>Don’t have an account yet? </p>
+        <button data-btn-inner='register' class='main-button main-button--transparent login-modal__btn'>
+          Create an account
+        </button>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <div class="modal login-modal" data-popup="register">
+
+    <button class="close modal__close" aria-label="Закрыть модальное окно">
+      <svg width='24' height='24'>
+        <use href='img/sprite/sprite.svg#Cancel'></use>
+      </svg>
+    </button>
+
+    <div class="modal__box login-modal__inner" role="dialog" aria-modal="true">
+
+
+      <h2 class="login-modal__title default-pretitle">
+        Register
+      </h2>
+
+      <form action="#" class="login-modal__form">
+
+        <label class="login-modal__label" data-legend="Email address">
+          <input type="email" placeholder='Email address'>
+        </label>
+
+        <label class="login-modal__label password-label" data-legend='Password'>
+          <input type="password">
+          <button class='show-pass login-modal__show'>
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#Eye'></use>
+            </svg>
+          </button>
+        </label>
+
+        <div class="checkbox">
+          <label class="custom-checkbox">
+            <input type="checkbox" name="terms" value="#" checked>
+            <span>I agree to Glassupply’s  <a href="#">Terms and conditions.</a></span>
+          </label>
+        </div>
+
+        <button  class='main-button login-modal__btn'>
+          Create account
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,39 @@
+.info-slider {
+
+    .swiper {
+
+
+        &-container {
+            overflow: initial !important;
+            height: Min(66.667vw, 800px);
+        }
+
+        &-slide {
+
+
+            &:nth-child(even) {
+
+                .info-card {
+                    left: 0;
+                    right: initial;
+                }
+            }
+        }
+    }
+
+    &__card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0 Min(17.5vw, 210px);
+    }
+
+    .info-card {
+        position: absolute;
+        height: initial;
+        right: 0;
+    }
+}
