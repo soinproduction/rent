@@ -97,9 +97,9 @@ const styles = () => {
     ))
     .pipe(mainSass())
     .pipe(autoprefixer({
-      cascade: false,
+      // cascade: false,
       // grid: true,
-      overrideBrowserslist: ["last 5 versions"]
+      // overrideBrowserslist: ["last 5 versions"]
     }))
     .pipe(gulpif(isProd, cleanCSS({
       level: 2
